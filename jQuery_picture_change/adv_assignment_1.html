@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" media="all" />
+<link rel="stylesheet" href="#" type="text/css" media="all" />
+
+<script>
+$(document).ready(function(){
+
+	$(".car").mouseover(function(){
+		$(this).fadeOut(function(){
+		$(this).attr("src", "brz_back_"+ $(this).attr("alt") +".jpg");
+		$(this).fadeIn("fast");
+		console.log(this);
+	});
+	});
+		$(".car").mouseleave(function(){
+		$(this).fadeOut("fast",function(){
+		$(this).attr("src", "brz_front_"+ $(this).attr("alt") +".jpg");
+		$(this).fadeIn("fast");
+		console.log(this);
+	});
+	});
+});
+</script>
+</head>
+<!-- CSS inline because there's only one change -->
+<style>
+.car{
+	height:155px;
+	width:250px;
+	border:1px solid black;
+	float:left;
+	margin: 10px;
+}
+</style>
+<body>
+
+<h2>jQuery-Advanced Assignment 1 Subaru BRZ Fade In and Fade Out on hover</h2>
+<div>
+	 	<img id="car1" class="car" width="250" src="brz_front_0.jpg" alt="0">
+		<img id="car2" class="car" width="250" src="brz_front_w.jpg" alt="w">
+		<img id="car3" class="car" width="250" src="brz_front_b.jpg" alt="b">
+		<img  id="car4" class="car" width="250" src="brz_front_r.jpg" alt="r">
+</div>
+</body>
+
+</html>
